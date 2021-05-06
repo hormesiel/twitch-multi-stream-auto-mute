@@ -4,6 +4,9 @@
   "version": "0.0.1",
 
   "description": "Automatically mutes Twitch streams you have open but are not watching. Very handy when following several streams at once.",
+  "icons": {
+    "128": "icon/128.png"
+  },
 
   "background": {
     "scripts": ["background-script.js"],
