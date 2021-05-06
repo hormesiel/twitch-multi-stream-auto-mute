@@ -1,0 +1,13 @@
+{
+  "manifest_version": 2,
+  "name": "Twitch Auto-Mute",
+  "version": "0.0.1",
+
+  "description": "Auto-mutes Twitch streams that you have open but are not watching.",
+
+  "content_scripts": [{
+    "matches": ["https://www.twitch.tv/*"],
+    "js": ["index.js"],
+    "run_at": "document_idle"
+  }]
+}
