@@ -3,11 +3,18 @@
   "name": "Twitch Auto-Mute",
   "version": "0.0.1",
 
-  "description": "Auto-mutes Twitch streams that you have open but are not watching.",
+  "description": "Auto-mutes Twitch streams that you have open but are not watching. Very handy when you're watching multiple streams at once.",
 
+  "background": {
+    "scripts": ["background-script.js"],
+    "persistent": false
+  },
   "content_scripts": [{
     "matches": ["https://www.twitch.tv/*"],
-    "js": ["index.js"],
+    "js": ["content-script.js"],
     "run_at": "document_idle"
-  }]
+  }],
+  "permissions": [
+    "tabs"
+  ]
 }
