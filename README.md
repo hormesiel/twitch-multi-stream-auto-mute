@@ -1,4 +1,8 @@
 # Twitch Multi Stream Auto-Mute
+## Get it on the Chrome Webstore!
+
+*Link coming soon*
+
 ## Zipping
 
 ```bash
