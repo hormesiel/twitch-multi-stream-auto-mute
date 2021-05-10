@@ -1,7 +1,7 @@
 # Twitch Multi Stream Auto-Mute
 ## Get it on the Chrome Webstore!
 
-*Link coming soon*
+[![](https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png)](https://chrome.google.com/webstore/detail/twitch-multi-stream-auto/dnjockganjfnlkfengbekkkbplpfpold)
 
 ## Zipping
 
