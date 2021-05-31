@@ -13,7 +13,7 @@
     "persistent": false
   },
   "content_scripts": [{
-    "matches": ["https://www.twitch.tv/*"],
+    "matches": ["https://*.twitch.tv/*"],
     "js": ["content-script.js"],
     "run_at": "document_idle"
   }],
