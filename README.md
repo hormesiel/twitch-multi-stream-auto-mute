@@ -10,9 +10,13 @@ Every time you switch tab to another Twitch stream, the one you leave is automat
 
 ## Get it on the Chrome Webstore!
 
+⬇ Install the extension by clicking on the image below ⬇
+
 [![](https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png)](https://chrome.google.com/webstore/detail/twitch-multi-stream-auto/dnjockganjfnlkfengbekkkbplpfpold)
 
-## Zipping
+## Reminders (for myself)
+
+### Zipping
 
 ```bash
 TMSAM_VERSION=X.Y.Z
