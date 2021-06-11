@@ -3,10 +3,7 @@
 //
 
 function muteOtherStreams() {
-  setTimeout(
-    () => chrome.runtime.sendMessage({ type: 'mute_other_streams' }),
-    100
-  )
+  chrome.runtime.sendMessage({ type: 'mute_other_streams' })
 }
 
 function setupPageVisibilityChangeListener() {
