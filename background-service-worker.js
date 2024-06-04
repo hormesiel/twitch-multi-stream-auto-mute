@@ -26,23 +26,27 @@ chrome.runtime.onMessage.addListener((message, sender, reply) => {
 //
 
 function muteOtherTwitchTabs(currentTab, timeElapsedSinceFirstTry) {
-  chrome.tabs.query({ url: 'https://*.twitch.tv/*' }, twitchTabs => {
-    // If something wrong happened
-    if (chrome.runtime.lastError) {
-      // If less than 1sec has elapsed since the content script sent the command, retry after a small delay
-      if (timeElapsedSinceFirstTry < MAX_RETRY_DURATION) {
-        setTimeout(() => muteOtherTwitchTabs(currentTab, timeElapsedSinceFirstTry + RETRY_DELAY), RETRY_DELAY)
-        return
-      }
-      // Otherwise abort and log the error
-      else {
-        console.error(chrome.runtime.lastError.message)
-        return
-      }
-    }
+  chrome.tabs.query({ url: 'https://*.twitch.tv/*' }).then(
+    tabs => onQueryTabsSuccess(tabs, currentTab),
+    err => onQueryTabsError(err, currentTab, timeElapsedSinceFirstTry)
+  )
+}
 
-    twitchTabs.forEach(tab => chrome.tabs.update(tab.id, {
-      muted: tab.id !== currentTab.id
-    }))
-  })
+function onQueryTabsError(err, currentTab, timeElapsedSinceFirstTry) {
+  // If less than 1 sec has elapsed since the content script sent the command, retry after a small delay
+  if (timeElapsedSinceFirstTry < MAX_RETRY_DURATION) {
+    setTimeout(() => muteOtherTwitchTabs(currentTab, timeElapsedSinceFirstTry + RETRY_DELAY), RETRY_DELAY)
+    return
+  }
+  // Otherwise abort and log the error
+  else {
+    console.error(chrome.runtime.lastError.message)
+    return
+  }
+}
+
+function onQueryTabsSuccess(twitchTabs, currentTab) {
+  twitchTabs.forEach(tab => chrome.tabs.update(tab.id, {
+    muted: tab.id !== currentTab.id
+  }))
 }
