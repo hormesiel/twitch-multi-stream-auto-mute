@@ -9,8 +9,8 @@
   },
 
   "background": {
-    "scripts": ["background-script.js"],
-    "persistent": false
+    "service_worker": "background-service-worker.js",
+    "type": "module"
   },
   "content_scripts": [{
     "matches": ["https://*.twitch.tv/*"],

@@ -2,9 +2,8 @@
 // Message listener
 //
 
-const MAX_RETRY_DURATION = 500 // 500ms
-const RETRY_DELAY = 50 // 50ms
-
+const MAX_RETRY_DURATION = 500 // 500 ms
+const RETRY_DELAY = 50 // 50 ms
 
 //
 // Message listener
