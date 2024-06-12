@@ -12,7 +12,7 @@ Every time you switch tab to another Twitch stream, the one you leave is automat
 
 ⬇ Install the extension by clicking on the image below ⬇
 
-[![](https://storage.googleapis.com/chrome-gcs-uploader.appspot.com/image/WlD8wC6g8khYWPJUsQceQkhXSlv1/tbyBjqi7Zu733AAKA5n4.png)](https://chrome.google.com/webstore/detail/twitch-multi-stream-auto/dnjockganjfnlkfengbekkkbplpfpold)
+[<img src="https://developer.chrome.com/static/docs/webstore/branding/image/206x58-chrome-web-bcb82d15b2486.png">](https://chrome.google.com/webstore/detail/twitch-multi-stream-auto/dnjockganjfnlkfengbekkkbplpfpold)
 
 ## Reminders (for myself)
 
